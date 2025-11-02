@@ -1,14 +1,15 @@
 body,html{
     padding: 0;
     margin: 0;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    scroll-behavior: smooth;
     background-color: #adc1dd;
     font-size: 18px;
     font-family: 'Courier New', monospace;
 }
-
+body,html,select{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
 #loginbd,html{
     background-color: #456882;
 }
@@ -144,12 +145,10 @@ button:hover, tr button:hover{
 }
 
 /*
-    LOGIN PAGE
+    FORMS
 */
 
-
-
-#login{
+#login,#update form{
     border-radius: 10px;
     background-color: #adc1dd;
     display: flex;
@@ -161,15 +160,41 @@ button:hover, tr button:hover{
     margin:auto;
     margin-top: 25vh;
 }
-#login input{
+#login input,#update input{
     border: none;
     height: 5vh;
     width: 15vw;
     border-radius: 10px;
     margin-bottom: 1.5%;
 }
-#login button{
+#login button,#update button{
     height: 5vh;
     width: 15.29vw;
     border-radius: 10px;
+}
+
+#update{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+#update form > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 25vw;
+    justify-content: space-between;
+}
+#update select{
+    border: none;
+    height: 5vh;
+    width: 15vw;
+    border-radius: 10px;
+    margin-bottom: 1.5%;
+    background-color: #234C6A;
+    color:white;
 }

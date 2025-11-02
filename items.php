@@ -35,5 +35,6 @@ $items = $con->query("SELECT i.itemID,i.itemName,t.itemType FROM item i join ite
         }
         ?>
     </table>
+
 </body>
 </html>
