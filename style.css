@@ -1,0 +1,175 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    background-color: #adc1dd;
+    font-size: 18px;
+    font-family: 'Courier New', monospace;
+}
+
+#loginbd,html{
+    background-color: #456882;
+}
+
+body{
+    min-height: 100vh;
+}
+
+button{
+    background-color: #234C6A;
+    color:white;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin: 0;
+    cursor:pointer;
+}
+
+
+/*
+        TABLE STYLES
+*/
+table{
+    align-self: flex-start;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    border:none;
+    color:white;
+
+    border-collapse: collapse;
+
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+tr{
+    transition: background-color 0.2s ease;
+    height: 3em;
+}
+
+tr:first-of-type td {
+    background-color: #16384e;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even){
+    background-color: #234C6A;
+}
+
+tr:nth-child(odd){
+    background-color: #456882;
+}
+
+
+
+td {
+    height: 100%;
+    padding: 0;
+    padding: 0 0.3em 0 0.3em;
+}
+
+td button {
+    height: 100%;
+    width: 10vh;
+    margin-right: 1%;
+}
+tr:nth-child(even) button{
+    background-color: #234C6A;
+}
+
+tr:nth-child(odd) button{
+    background-color: #456882;
+}
+
+tr:hover,tr:hover button{
+    background-color: #5c7b9d;
+}
+/*
+        NAV STYLES
+*/
+nav{
+    height: 10vh;
+    background-color: #234C6A;
+    position:sticky;
+}
+nav > div{
+    display: flex;     
+}
+nav button{
+    height: 10vh;
+    width: 10%;
+    font-size: 24px;
+}
+nav button:hover{
+    border-bottom: 3px solid #F87B1B;
+}
+/* only for logout button in nav */
+
+#logout{
+    margin-left: auto;
+}
+
+/*
+    LOCATIONS STYLE
+*/
+#locations{
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+}
+#locations aside{
+    margin-left: 5%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    background-color: #456882;
+    align-self: flex-start;
+    border-radius: 8px;
+}
+#locations aside button{
+    height: 5vh;
+}
+#locations div{
+    margin-left: 20%;
+}
+
+
+button:hover, tr button:hover{
+    background-color: #1B3C53;
+    color: rgb(250, 176, 119);
+}
+
+/*
+    LOGIN PAGE
+*/
+
+
+
+#login{
+    border-radius: 10px;
+    background-color: #adc1dd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 40vw;
+    margin:auto;
+    margin-top: 25vh;
+}
+#login input{
+    border: none;
+    height: 5vh;
+    width: 15vw;
+    border-radius: 10px;
+    margin-bottom: 1.5%;
+}
+#login button{
+    height: 5vh;
+    width: 15.29vw;
+    border-radius: 10px;
+}
