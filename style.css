@@ -10,7 +10,7 @@ body,html,select{
     -ms-overflow-style: none;
     scroll-behavior: smooth;
 }
-#loginbd,html{
+#loginbd{
     background-color: #456882;
 }
 
@@ -44,6 +44,7 @@ table{
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 4vh;
 }
 
 tr{
@@ -197,4 +198,13 @@ button:hover, tr button:hover{
     margin-bottom: 1.5%;
     background-color: #234C6A;
     color:white;
+}
+
+
+
+#add{
+    width: 10vw;
+    height: 5vh;
+    margin: 1vh auto 0 42vw;
+    border-radius: 8px;
 }

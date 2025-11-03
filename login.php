@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
 <!DOCTYPE html>
-<html lang="pl">
+<html id="loginbd" lang="pl">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/login.css">

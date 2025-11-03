@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $locationID = $_POST['locationID'];
     $row = $_POST['row'];   
     $shelf = $_POST['shelf'];
-
+    $buildingID = $_POST['buildingID'];
     if($locationID && $row && $shelf){
 
         $query = $con->prepare("UPDATE location SET row = ?, shelf = ? WHERE locationID = ?");
@@ -41,6 +41,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }else {
             header("Location: locations.php?status=invalidInput&building=".$buildingSelected);
+            exit;
+        }
+    }
+    else if($buildingID && $row && $shelf){
+        $query = $con->prepare("INSERT INTO location(buildingID,row,shelf) VALUES(?,?,?)");
+        $query->bind_param("iss", $buildingID, $row, $shelf);
+
+        if ($query->execute()) {
+            header("Location: locations.php?status=add&building=".$buildingSelected);
             exit;
         }
     }
@@ -86,7 +95,28 @@ $con->close();
         </div>
     <?php
         }
+    if(isset($_GET['add'])){
     ?>
+        <div id="update">
+            <form action="locations.php?building=<?= $buildingSelected ?>" method="post">
+                <h1>Add Location</h1>
+                <input type="hidden" name="buildingID" value="<?= $buildingSelected?>">
+                <div>
+                    <label for="row">Row:</label>
+                    <input type="text" id="row" name="row" placeholder="Row" required>
+                </div>
+                <div>
+                    <label for="shelf">Shelf:</label>
+                    <input type="text" id="shelf" name="shelf" placeholder="Shelf" required>
+                </div>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    <?php
+        }
+    ?>
+    
+    <button id="add" onClick="location.href = 'locations.php?add=true&building=<?php echo $buildingSelected?>'">Add new location</button>
     <main id="locations">
         <aside>
             <?php

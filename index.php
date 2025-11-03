@@ -144,7 +144,7 @@ $con->close();
     <?php
         }
     ?>
-    <button onClick="location.href = 'index.php?add=true'">Add new entry</button>
+    <button id="add" onClick="location.href = 'index.php?add=true'">Add new entry</button>
     <table>
         <tr>
             <td>Name</td>
